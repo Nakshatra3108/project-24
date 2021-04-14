@@ -12,8 +12,13 @@ class Paper{
         World.add(world,this.body);
     }
     display(){
+        var paperpos= this.body.position
+        push()
+        translate(paperpos.x,paperpos.y)
         ellipseMode(RADIUS);
-        fill("yellow");
-        rect(this.body.position.x,this.body.position.y, this.radius);
+       strokeWeight(3)
+       fill(255,0,255)
+       ellipse(0,0,this.radius,this,this.radius)
+       pop()
     }
 }
